@@ -23,7 +23,10 @@
 ### Сценарий запуска LightGBM на готовом датасете.
 
 Для выполнения этого необходимо запустить файл */script_1.sh*:
-> bash ./script_1.sh
+
+```
+bash ./script_1.sh
+```
 
 1. Загрузка данных из [облака](https://drive.google.com/drive/folders/1dZnvVXvRYJ2MmpGnDWVZ3y6J42fUEZnV?usp=sharing) в */data*
 2. Обучение ранажирующей модели
