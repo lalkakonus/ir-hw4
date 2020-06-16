@@ -89,14 +89,14 @@ bash ./script_3.sh
 
 ### Сценарий подсчёта семантических признаков признаков.
 
-Код расположен в файлах */src/python/fasttext.py, /src/pytohn/elmo, /src/pytohn/bert, /src/pytohn/use*.
+Код расположен в директории */src/python/*.
 
-Рекомендуется перейти по ссылкам на Google Colab и запускать код там.
+В виду высокой ресурсоёмкости вычислений, рекомендуется перейти по ссылкам на Google Colab и запускать код там. 
 
-1. BERT [Googel Colab](https://colab.research.google.com/drive/1hpG6UB5Y8awifB2SMldcHlIndQXOclpu#scrollTo=rBNwamZCTVmW)
-2. FastText [Google Colab](https://colab.research.google.com/drive/1ZSLONizMuQIPHfgEFvSApPjb04wzbr_O?usp=sharing)
-3. USE [Google Colab](https://colab.research.google.com/drive/1bayelVP4itrYqcda9jl_ftAwK8fLu8LZ#scrollTo=MSeY-MUQo2Ha)
-4. ELMo [Google Colab](https://colab.research.google.com/drive/1lUja4LSUr-alI6G1e8McEGXBdhuIv4wQ#scrollTo=HKYg8fMZ8p3V)
+1. BERT в [Googel Colab](https://colab.research.google.com/drive/1hpG6UB5Y8awifB2SMldcHlIndQXOclpu#scrollTo=rBNwamZCTVmW) и в файле */src/python/BERT.ipynb*
+2. FastText в [Google Colab](https://colab.research.google.com/drive/1ZSLONizMuQIPHfgEFvSApPjb04wzbr_O?usp=sharing) и в файле */src/python/FastText.ipynb*
+3. USE в [Google Colab](https://colab.research.google.com/drive/1bayelVP4itrYqcda9jl_ftAwK8fLu8LZ#scrollTo=MSeY-MUQo2Ha) и в файле */src/python/USE.ipynb*
+4. ELMo в [Google Colab](https://colab.research.google.com/drive/1lUja4LSUr-alI6G1e8McEGXBdhuIv4wQ#scrollTo=HKYg8fMZ8p3V) и в файле */src/python/ELMo.ipynb*
 
 
 ### Сценарий соединения кликовых, синтаксические и семантические данных
