@@ -14,19 +14,21 @@
 
 Для тестирования кода предлагаются следующие сценарии:
 
-* Запустить LightGBM на готовом датасете
-* Сделать предобработку текстов
-* Посчитать синтаксические признаки
-* Посчитать семантические признаки
-* Соеденить кликовые, синтаксические и семантические данные  
+* Запуск LightGBM на готовом датасете
+* Предобработку текстов запросов и заголовков документов
+* Подсчёт синтаксических признаков
+* Посчёт семантических признаков
+* Соединение кликовых, синтаксических и семантических данных  
 
-### Сценарий запуска LightGBM на готовом датасете.
+### Запуск LightGBM на готовом датасете.
 
 Для выполнения этого необходимо запустить файл */script_1.sh*:
 
 ```
 bash ./script_1.sh
 ```
+
+Данный скрипты выполняет следующую последовательность действий:
 
 1. Загрузка данных из [облака](https://drive.google.com/drive/folders/1dZnvVXvRYJ2MmpGnDWVZ3y6J42fUEZnV?usp=sharing) в */data*
 2. Обучение ранажирующей модели
@@ -37,10 +39,17 @@ bash ./script_1.sh
 
 * python3.6
 * lightgbm
+* matplotib
 
-### Сценарий предобработки текстов.
+### Предобработка текстов.
 
 Для выполнения этого необходимо запустить файл */script_2.sh*
+
+```
+bash ./script_2.sh
+```
+
+Данный скрипты выполняет следующую последовательность действий:
 
 1. Загрузка данных из [облака](https://drive.google.com/drive/folders/1dZnvVXvRYJ2MmpGnDWVZ3y6J42fUEZnV?usp=sharing) в */data*
 2. Применение 
@@ -59,6 +68,12 @@ bash ./script_1.sh
 ### Сценарий подсчёта синтаксических признаков.
 
 Для выполнения этого необходимо запустить файл */script_3.sh*
+
+```
+bash ./script_3.sh
+```
+
+Данный скрипты выполняет следующую последовательность действий:
 
 1. Загрузка данных из [облака](https://drive.google.com/drive/folders/1dZnvVXvRYJ2MmpGnDWVZ3y6J42fUEZnV?usp=sharing) в */data*
 2. Создание словаря
@@ -79,7 +94,7 @@ bash ./script_1.sh
 Рекомендуется перейти по ссылкам на Google Colab и запускать код там.
 
 1. BERT [Googel Colab](https://colab.research.google.com/drive/1hpG6UB5Y8awifB2SMldcHlIndQXOclpu#scrollTo=rBNwamZCTVmW)
-2. FastText [Google Colab](https://colab.research.google.com/drive/1ZSLONizMuQIPHfgEFvSApPjb04wzbr_O#scrollTo=XeYXaX19_GZV)
+2. FastText [Google Colab](https://colab.research.google.com/drive/1ZSLONizMuQIPHfgEFvSApPjb04wzbr_O?usp=sharing)
 3. USE [Google Colab](https://colab.research.google.com/drive/1bayelVP4itrYqcda9jl_ftAwK8fLu8LZ#scrollTo=MSeY-MUQo2Ha)
 4. ELMo [Google Colab](https://colab.research.google.com/drive/1lUja4LSUr-alI6G1e8McEGXBdhuIv4wQ#scrollTo=HKYg8fMZ8p3V)
 
@@ -87,6 +102,12 @@ bash ./script_1.sh
 ### Сценарий соединения кликовых, синтаксические и семантические данных
 
 Для выполнения этого необходимо запустить файл */script_4.sh*
+
+```
+bash ./script_4.sh
+```
+
+Данный скрипты выполняет следующую последовательность действий:
 
 1. Загрузка данных из [облака](https://drive.google.com/drive/folders/1dZnvVXvRYJ2MmpGnDWVZ3y6J42fUEZnV?usp=sharing) в */data*
 2. Конкатенация таблиц признаков
