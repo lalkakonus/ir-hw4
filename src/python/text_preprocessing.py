@@ -160,10 +160,10 @@ def process_queries():
 
 def process_titles():
     path_prefix = Path("data/titles")
-    pipeline = [Cutter(), Lower(), Stemmer(), Tokenizer("word_2")]
+    pipeline = [Cutter(), Lower(), Stemmer(), Tokenizer("word")]
     preprocessor = Preprocessor(pipeline=pipeline)
 
-    df = pd.read_csv(path_prefix / "titles_stemmer_corrected.tsv", sep="\t", index_col=0).fillna("")
+    df = pd.read_csv(path_prefix / "titles.tsv", sep="\t", index_col=0).fillna("")
     preprocessor.transform(df, path_prefix)
 
 

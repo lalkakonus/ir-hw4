@@ -1,12 +1,12 @@
-from pathlib import Path
-import pandas as pd
-import numpy as np
-from gensim.models import TfidfModel as GensimTfIdf
 from gensim.corpora import Dictionary
+from gensim.models import TfidfModel as GensimTfIdf
 from gensim.similarities import SparseMatrixSimilarity
 from gensim.summarization.bm25 import BM25 as GensimBM25
-import msgpack
 from helper import NDCG
+import msgpack
+import numpy as np
+import pandas as pd
+from pathlib import Path
 
 
 class TfIdf:
@@ -56,7 +56,6 @@ class BM25:
     def __init__(self):
         self.model = None
 
-    # TODO tune model
     def fit(self, corpus, k1=1.5, b=0.75):
         print("BM25:\tFit model...", end="")
         self.model = GensimBM25(corpus, k1=k1, b=b)
@@ -123,7 +122,7 @@ class Gensim:
 def main():
     mode = "word_2"
     assert mode in {"char_3", "word", "word_2", "char_4"}
-    prefix = Path("../data")
+    prefix = Path("data")
     title_input_path = prefix / "titles/titles_{}_tokenized.pkl".format(mode)
     tokenized_titles_df = pd.read_pickle(title_input_path)
     print("Titles data loaded from '{}'".format(title_input_path))

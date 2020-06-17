@@ -27,11 +27,14 @@ hadoop jar java.jar StatisticProcessJob <path/to/unpacked/data> <path/to/output>
 
 Map-Reduce задача находится в файле *src/main/java/DatasetFormatJob.java*
 
+Перед запуском задачи необходимо добавить файлы конфигурации в hadoop. Архив с файлами находится на [Google Drive](https://drive.google.com/file/d/1chz0hlbVjsO9mhi2NrjKkcl28FIa9OVD/view?usp=sharing).
 Запуск задачи на map-reduce:
+
 
 ```
 hadoop jar java.jar DatasetFormatJob <path/to/data> <path/to/output>
 ```
+
 
 ---
 

@@ -1,5 +1,7 @@
 data/click
 data/config
+data/titles
+data/queries
 data/semantic
 data/syntax
 data/script*

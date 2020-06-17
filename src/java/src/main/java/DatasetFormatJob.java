@@ -25,10 +25,10 @@ public class DatasetFormatJob extends Configured implements Tool {
 
     static int DIFFERENT_STATES = 5;
 
-    private static final Path sampleRelationPath = new Path("dataset_config_data/sample_relation.tsv");
-    private static final Path querySamplesRelationPath = new Path("dataset_config_data/query_samples_relation.tsv");
-    private static final Path docSamplesRelationPath = new Path("dataset_config_data/doc_samples_relation.tsv");
-    private static final Path hostDocRelationPath = new Path("dataset_config_data/host_urls_relation.tsv");
+    private static final Path sampleRelationPath = new Path("data/config_statistic_format/sample_relation.tsv");
+    private static final Path querySamplesRelationPath = new Path("data/config_statistic_format/query_samples_relation.tsv");
+    private static final Path docSamplesRelationPath = new Path("data/config_statistic_format/doc_samples_relation.tsv");
+    private static final Path hostDocRelationPath = new Path("data/config_statistic_format/host_urls_relation.tsv");
 
     public static class DatasetFormatMapper extends Mapper<LongWritable, Text, IntWritable, Text> {
         HashMap<String, List<String>> docSampleRelation;

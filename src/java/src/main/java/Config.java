@@ -5,10 +5,10 @@ import java.util.Map;
 import java.util.HashMap;
 
 class Config {
-    static final Path URL_MAP_FILEPATH = new Path("config_data/url_id-url.tsv");
-    static final Path QUERY_MAP_FILEPATH = new Path("config_data/query_id-query_score.tsv");
-    static final Path HOST_MAP_FILEPATH = new Path("config_data/host_id-url_id.tsv");
-    static final Path QUERY_DOC_CORR_MAP_FILEPATH = new Path("config_data/query_id-doc_ids.tsv");
+    static final Path URL_MAP_FILEPATH = new Path("data/config_statistic_collect/url_id-url.tsv");
+    static final Path QUERY_MAP_FILEPATH = new Path("data/config_statistic_collect/query_id-query_score.tsv");
+    static final Path HOST_MAP_FILEPATH = new Path("data/config_statistic_collect/host_id-url_id.tsv");
+    static final Path QUERY_DOC_CORR_MAP_FILEPATH = new Path("data/config_statistic_collect/query_id-doc_ids.tsv");
 
     static Map<String, BaseStatistic> StatisticMap;
     static {
