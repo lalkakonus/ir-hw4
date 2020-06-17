@@ -5,6 +5,11 @@ data/syntax
 data/script*
 src/java/data
 
+src/java/.gradle
+
+# IDEA
+*.idea
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
