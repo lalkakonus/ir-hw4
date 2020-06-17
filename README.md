@@ -1,5 +1,5 @@
 # Семестровый проект
-Репозиторий семестрового проекта дисциплины "Инфопоиск" на курсах [Техносфера](https://sphere.mail.ru/). 
+Репозиторий семестрового проекта дисциплины "Инфопоиск" на курсах [Техносфера](https://sphere.mail.ru/) для конкурса ["Relevance prediction by user behaviour"](https://www.kaggle.com/c/relevance-prediction-by-user-behaviour-spring-2020/overview).
 
 Задание выполнил *Кононов Сергей, группа BD-31* весной 2020 года.
 
