@@ -9,7 +9,7 @@ class Combiner:
 
     def __init__(self):
 
-        self.prefix = Path("../data")
+        self.prefix = Path("data")
 
         dtypes = {"sample_id": "int", "query_id": "int", "doc_id": "int", "label": "int"}
         self.relation_df = pd.read_csv(self.prefix / "config/samples.tsv", sep="\t", dtype=dtypes)
@@ -53,7 +53,7 @@ class Combiner:
         print("Feature names saved to {}".format(names_output_path))
 
     def combine_semantic_features(self):
-        prefix = self.prefix / "semantic/results"
+        prefix = self.prefix / "semantic"
 
         for name in os.listdir(prefix):
             input_path = prefix / name
