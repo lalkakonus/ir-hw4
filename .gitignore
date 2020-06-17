@@ -3,6 +3,7 @@ data/config
 data/semantic
 data/syntax
 data/script*
+src/java/data
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
