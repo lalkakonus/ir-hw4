@@ -46,14 +46,16 @@ class LightGBM:
 
 
 def main():
-    loader = Loader(validation_part=0.15)
+    try:
+        loader = Loader(validation_part=0.15)
 
-    lightGBM = LightGBM()
-    train_data, validation_data, test_data, feature_names = lightGBM.get_data(loader)
-    lightGBM.fit(train_data, validation_data, feature_names)
-    predictions = lightGBM.predict(test_data)
-    loader.save(predictions)
-
+        lightGBM = LightGBM()
+        train_data, validation_data, test_data, feature_names = lightGBM.get_data(loader)
+        lightGBM.fit(train_data, validation_data, feature_names)
+        predictions = lightGBM.predict(test_data)
+        loader.save(predictions)
+    except Exception as error:
+        print(error)
 
 if __name__ == "__main__":
     main()

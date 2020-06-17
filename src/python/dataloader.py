@@ -13,6 +13,10 @@ class Loader:
         self.feature_names_path = data_directory / "combined_data/feature_names.npy"
         self.samples_data_path = data_directory / "config/samples.tsv"
         self.prediction_path = data_directory / "prediction.csv"
+
+        for path in [self.feature_matrix_path, self.feature_names_path, self.samples_data_path]:
+            if not path.exists():
+                raise Exception("Error: Path '{}' doesn't exists.".format(path))
         self.prediction_header = "DocumentId,QueryId\n"
         self.samples_data_types = {"sample_id": "int", "query_id": "int", "doc_id": "int", "label": "float"}
 
