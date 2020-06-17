@@ -19,6 +19,7 @@
 * Подсчёт синтаксических признаков
 * Посчёт семантических признаков
 * Соединение кликовых, синтаксических и семантических данных  
+* Генерация похожих запросов
 
 ### Запуск LightGBM на готовом датасете.
 
@@ -44,6 +45,7 @@ bash ./script_1.sh
 ### Предобработка текстов.
 
 Для выполнения этого необходимо запустить файл */script_2.sh*
+ВНИМАНИЕ для токенизацации типа *3_char* и *4_char* необходимо минимум 12GB RAM.
 
 ```
 bash ./script_2.sh
@@ -63,6 +65,7 @@ bash ./script_2.sh
 
 * request
 * sklearn
+* progress
 * pymystem3
 
 ### Сценарий подсчёта синтаксических признаков.
@@ -99,7 +102,7 @@ bash ./script_3.sh
 4. ELMo в [Google Colab](https://colab.research.google.com/drive/1lUja4LSUr-alI6G1e8McEGXBdhuIv4wQ?usp=sharing) и в файле */src/python/ELMo.ipynb*
 
 
-### Сценарий соединения кликовых, синтаксические и семантические данных
+### Cоединения кликовых, синтаксические и семантические данных
 
 Для выполнения этого необходимо запустить файл */script_4.sh*
 
@@ -112,3 +115,8 @@ bash ./script_4.sh
 1. Загрузка данных из [облака](https://drive.google.com/drive/folders/1dZnvVXvRYJ2MmpGnDWVZ3y6J42fUEZnV?usp=sharing) в */data*
 2. Конкатенация таблиц признаков
 3. Сохранение результата в */data*
+
+### Генерация похожих запросов
+
+Код расположен в [Google Colab](https://colab.research.google.com/drive/1FaPxFpxoWLk20cojKMdCwaoM7nPXsnEd?usp=sharing) и в формате Jupyter Notebook файле
+*/src/python/Similar_query_generator.ipynb*

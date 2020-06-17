@@ -1,11 +1,9 @@
 import requests
 import pandas as pd
 from pathlib import Path
-from fast_text import FastText
 from progress.bar import Bar
 from pymystem3 import Mystem
 import xml.etree.ElementTree as Etree
-from nltk.corpus import stopwords as nltk_stopwords
 from sklearn.feature_extraction.text import CountVectorizer
 from time import time
 
@@ -105,21 +103,6 @@ class Stemmer:
         return data
 
 
-class StopWords:
-
-    def __str__(self):
-        return "Stop words"
-
-    def __init__(self, stop_words=nltk_stopwords.words("russian")):
-        self.path_postfix = "_stopwords.tsv"
-        self.tokenizer = CountVectorizer(lowercase=False, stop_words=stop_words, token_pattern=r"\w+").build_analyzer()
-
-    def transform(self, data, output_path):
-        data["text"] = data["text"].apply(lambda x: " ".join(self.tokenizer(x)))
-        data.to_csv(output_path, sep="\t")
-        return data
-
-
 class Tokenizer:
     def __str__(self):
         return "Tokenizer"
@@ -168,36 +151,24 @@ class Preprocessor:
 
 
 def process_queries():
-    path_prefix = Path("../data/queries")
-    # pipeline = [Lower(), Speller(), Stemmer(), Tokenizer("word")]
-    # pipeline = [Tokenizer(mode="char_4"), ]
-    # preprocessor = Preprocessor(pipeline)
-    # df = pd.read_csv("../data/queries/queries_stemmer_corrected.tsv", sep="\t", index_col=0)
-    # preprocessor.transform(df, path_prefix)
-    #
-    pipeline = [FastText("nn")]
+    data_folder = Path("data/queries")
+    pipeline = [Lower(), Speller(), Stemmer(), Tokenizer("word")]
     preprocessor = Preprocessor(pipeline)
-    df = pd.read_csv("../data/queries/queries_spell_corrected.tsv", sep="\t", index_col=0)
-    preprocessor.transform(df, path_prefix)
+    data = pd.read_csv(data_folder / "queries.tsv", sep="\t", index_col=0)
+    preprocessor.transform(data, data_folder)
 
 
 def process_titles():
-    path_prefix = Path("../data/titles")
-    # pipeline = [Cutter(), Lower(), Stemmer(), Tokenizer("word_2")]
-    pipeline = [Tokenizer("word_2")]
+    path_prefix = Path("data/titles")
+    pipeline = [Cutter(), Lower(), Stemmer(), Tokenizer("word_2")]
     preprocessor = Preprocessor(pipeline=pipeline)
 
-    df = pd.read_csv("../data/titles/titles_stemmer_corrected.tsv", sep="\t", index_col=0).fillna("")
+    df = pd.read_csv(path_prefix / "titles_stemmer_corrected.tsv", sep="\t", index_col=0).fillna("")
     preprocessor.transform(df, path_prefix)
-
-    # pipeline = [FastText(word_embeddings=False, sentence_embeddings=True)]
-    # preprocessor = Preprocessor(pipeline)
-    # df = pd.read_csv("../data/titles_lowered.tsv", sep="\t", index_col=0).fillna("")
-    # preprocessor.transform(df, path_prefix)
 
 
 def main():
-    # process_queries()
+    process_queries()
     process_titles()
 
 
